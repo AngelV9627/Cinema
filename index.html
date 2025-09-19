@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineVila</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo" id="logo">🍿 CineVila</div>
+    <form id="search-form">
+      <input type="text" id="search-input" placeholder="Buscar película o serie..." required>
+      <button type="submit">🔍</button>
+    </form>
+    <div id="user-info">
+      <button id="login-btn">Login</button>
+      <span id="username" style="display:none;"></span>
+      <button id="logout-btn" style="display:none;">Logout</button>
+    </div>
+  </header>
+
+  <main id="main-content"></main>
+
+  <!-- Modal de película/serie -->
+  <div id="movie-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Modal Login/Registro -->
+  <div id="auth-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="auth-title">Login</h2>
+      <form id="auth-form">
+        <input type="text" id="auth-username" placeholder="Usuario" required>
+        <input type="password" id="auth-password" placeholder="Contraseña" required>
+        <button type="submit" id="auth-submit">Login</button>
+      </form>
+      <p id="toggle-auth">¿No tienes cuenta? <span id="switch-auth">Regístrate</span></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Hecho con ❤️ por Angel Vila</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
